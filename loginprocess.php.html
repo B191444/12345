@@ -1,0 +1,25 @@
+<?php
+include("db_connect.php");
+if(issset($_POST["signup"]));
+{
+$"username=$_POST["usename"];
+$password=$_POST["password"];
+
+$query="select * from login where 
+username='$username' and
+password='$password' ";
+
+$result=mysqli_query($conn,$query);
+$row=mysqli_fectch_array($result);
+if($row['username']==$username &&  $row['password]==$password)
+{
+echo "Login successful";
+echo "Welcome $username;
+}
+else
+{
+echo"provide correct details";
+}
+mysqli_close($conn)
+?>
+s

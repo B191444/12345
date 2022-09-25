@@ -1,0 +1,17 @@
+<?php
+include("db_connect.php")
+if(isset($_POST["signup"]))
+{
+$username=$_POST["username"];
+$password=$_POST["password"];
+$emil=$_POST["email"];
+$query=("insert into login(username,password,email values($username,$password,$email");
+
+if(mysqli_query($conn,$query)){
+echo "Registration successful" ;
+}
+else{
+echo " Registration Failed";
+
+}
+SS
